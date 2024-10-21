@@ -1,0 +1,17 @@
+footer{
+    background-color: #f6f2e9;
+}
+
+.text-footer{
+    font-size: small;
+    color: brgb(118, 76, 36);
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+a{
+    text-transform: none;
+}

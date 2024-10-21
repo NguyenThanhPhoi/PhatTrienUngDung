@@ -1,0 +1,152 @@
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit; /* Giữ màu sắc mặc định cho link */
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: #F6F2E9;
+    z-index: 100;
+    overflow: visible;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.left-nav img {
+    vertical-align: middle; /* Ensure the image is aligned properly */
+}
+
+.left-nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav ul li {
+    position: relative; /* Cần thiết cho dropdown */
+    margin: 0 30px;
+}
+
+.left-nav .dropdown-menu {
+    display: none; /* Ẩn menu khi không di chuột */
+    position: absolute;
+    top: 100%; /* Hiển thị bên dưới item menu */
+    left: 0;
+    background-color: #F6F2E9;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+}
+
+.left-nav .dropdown-menu li {
+    padding: 10px 0 10px 0;
+}
+
+.left-nav .dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.left-nav .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+.left-nav .dropdown:hover .dropdown-menu {
+    display: block; /* Hiển thị menu khi di chuột qua */
+}
+
+
+.right-nav {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+}
+
+.right-nav .search {
+    margin-right: 15px; /* Khoảng cách giữa form tìm kiếm và các phần tử khác */
+}
+
+.search-form {
+    display: flex;
+    align-items: center; /* Căn chỉnh input và button theo chiều dọc */
+}
+
+.search-form input {
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px; /* Khoảng cách giữa input và button */
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-form button:hover {
+    color: #000;
+}
+
+.right-nav .user, .right-nav .cart {
+    margin-left: 20px; /* Khoảng cách giữa các biểu tượng người dùng và giỏ hàng */
+    font-size: 20px; /* Điều chỉnh kích thước biểu tượng nếu cần */
+}
+
+
+.search-form {
+    position: relative;
+}
+
+.search-form input {
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-form button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-form button:focus {
+    outline: none;
+}
+
+.search-form button:hover {
+    color: #000;
+}
+
+.fa-solid {
+    padding: 0 20px;
+}

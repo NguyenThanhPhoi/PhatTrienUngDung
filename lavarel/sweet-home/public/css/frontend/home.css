@@ -1,0 +1,180 @@
+
+.content{
+    display: flex;
+    height: auto;
+    background-color: #f6f2e9;
+}
+
+.left-content{
+    width: 53%;
+    padding: 100px 0 0 200px;
+    animation: slide-in-left 1s ease-out forwards;
+    animation-delay: 0s; /* Bắt đầu ngay lập tức */
+}
+
+.left-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f2e9; /* Màu lớp phủ */
+    opacity: 0.9; /* Độ mờ của lớp phủ */
+    mix-blend-mode: lighten; /* Chỉ pha trộn với hình nền */
+    z-index: 1; /* Đảm bảo lớp phủ nằm phía trên hình nền nhưng dưới nội dung */
+}
+
+.left-content > * {
+    position: relative; /* Đặt nội dung phía trên lớp phủ */
+    z-index: 2; /* Đảm bảo nội dung nằm phía trên pseudo-element */
+}
+
+.banner{
+    width: 530px;
+    height: 530px;
+}
+
+
+.title-content{
+    color: rgb(118, 76, 36);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.des-content{
+    font-size: 19;
+}
+
+/* Nội dung bên trái */
+.left-content {
+    animation: slide-in-left 1s ease-out forwards; /* Hiệu ứng xuất hiện từ trái */
+    /* forwards: giữ trạng thái cuối cùng sau khi hết hoạt ảnh */
+}
+
+.title-content,
+.des-content,
+.btn-order {
+    opacity: 0; /* Bắt đầu với độ mờ là 0 */
+    animation: slide-in-left 1s ease-out forwards; /* Thực hiện hiệu ứng slide-in từ trái */
+}
+
+/* Hiệu ứng cụ thể cho từng phần tử */
+.title-content {
+    animation-delay: 0.2s; /* Thời gian chậm trễ trước khi bắt đầu */
+}
+
+.des-content {
+    animation-delay: 0.4s;
+}
+
+.btn-order {
+    animation-delay: 0.6s;
+}
+
+/* Nội dung bên phải */
+.right-content {
+    opacity: 0; /* Bắt đầu với độ mờ là 0 */
+    animation: fade-in 1.5s ease-out forwards 0.8s; /* Hiệu ứng xuất hiện từ từ */
+}
+
+/* Keyframes cho hiệu ứng xuất hiện từ trái qua phải */
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%); /* Bắt đầu từ ngoài màn hình bên trái */
+        opacity: 0; /* Bắt đầu với độ mờ là 0 */
+    }
+    to {
+        transform: translateX(0); /* Đến vị trí ban đầu */
+        opacity: 1; /* Độ mờ đầy đủ */
+    }
+}
+
+/* Keyframes cho hiệu ứng xuất hiện từ từ */
+@keyframes fade-in {
+    from {
+        opacity: 0; /* Bắt đầu với độ mờ là 0 */
+    }
+    to {
+        opacity: 1; /* Độ mờ đầy đủ */
+    }
+}
+
+/* Đảm bảo độ ưu tiên cao hơn */
+a.btn.btn-order {
+    border-radius: 12px;
+    color: #4A221A;
+    border-color: #4A221A;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.btn.btn-order:hover {
+    background-color: #4A221A;
+    color: white;
+    border-color: #4A221A;
+}
+
+
+.about {
+    width: 100%;
+    height: 550px;
+}
+
+.title-about{
+    padding-top: 30px;
+}
+
+.title-about h1{
+    font-family: 'Berkshire Swash', cursive;
+    color: rgb(118, 76, 36);
+}
+
+.left-about img{
+    width: 100%;
+    height: auto;
+}
+
+.left-about{
+    padding-left: 100px !important;
+}
+
+.right-about{
+    font-size: 19;
+    padding-right: 200px !important;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.left-about,
+.right-about {
+    opacity: 0;
+    transform: translateX(-50px); /* Chuyển trái */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    /* 1.5s: thời gian thay đổi thuộc tính, ease-out: hiệu ứng nhanh chậm dần */
+}
+
+.right-about {
+    transform: translateX(50px); /* Chuyển phải */
+}
+
+.about.show .left-about {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about.show .right-about {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
