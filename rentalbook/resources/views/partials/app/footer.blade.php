@@ -1,33 +1,74 @@
+<style>
+footer {
+  background-color: #1a1c1e;
+  color: #fff;
+  padding: 40px 0;
+}
 
-<footer class="text-center">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Về Chúng Tôi</h5>
-                <p>Chúng tôi chuyên cung cấp dịch vụ cho thuê sách với nhiều thể loại phong phú.</p>
-            </div>
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Liên Kết Nhanh</h5>
-                <ul class="list-unstyled footer-links">
-                    <li><a href="#">Trang Chủ</a></li>
-                    <li><a href="#">Sách Mới</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                    <li><a href="#">Giới Thiệu</a></li>
-                </ul>
-            </div>
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
 
-            <div class="col-md-4 mb-4">
-                <h5 class="text-uppercase">Liên Hệ Chúng Tôi</h5>
-                <p>Email: contact@chothuesach.com</p>
-                <p>Điện thoại: +84 123 456 789</p>
-                <p>Địa chỉ: 123 Đường Sách, Thành Phố, Việt Nam</p>
-            </div>
-        </div>
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-section a {
+  display: block;
+  color: #b3b3b3;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  color: #b3b3b3;
+}
+</style>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Terms</h4>
+      <a href="#">Terms</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cokies</a>
     </div>
-
-    <div class="text-center p-3" style="background-color: #e9ecef;">
-        © 2024 Bản quyền thuộc về:
-        <a class="text-dark" href="#">Cho Thuê Sách</a>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <a href="#">Services</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+      <a href="#">Careers</a>
     </div>
+    <div class="footer-section">
+      <h4>About</h4>
+      <a href="#">Community</a>
+      <a href="#">Help center</a>
+      <a href="#">Support</a>
+    </div>
+    <div class="footer-section">
+      <h4>Account</h4>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Billing</a>
+      <a href="#">Notifications</a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2020 All Right Reserved by Carly Rent</p>
+  </div>
 </footer>
