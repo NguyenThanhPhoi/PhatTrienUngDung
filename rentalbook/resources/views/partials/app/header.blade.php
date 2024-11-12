@@ -84,15 +84,15 @@ nav ul li a:hover {
     <div class="header-container">
         <div class="logo">
             <a href="{{ url('/') }}">
-                <img src="{{ asset('images/carly-rent-logo.png') }}" alt="Carly Rent">
+                <img src="{{ asset('image/9POINTS.png') }}" alt="Carly Rent">
             </a>
         </div>
         <nav>
             <ul>
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/vehicles') }}">Vehicles</a></li>
-                <li><a href="{{ url('/location') }}">Location</a></li>
-                <li><a href="{{ url('/contact') }}">Contact</a></li>
+                <li><a href="{{ url('/') }}">Trang chủ</a></li>
+                <li><a href="{{ url('/vehicles') }}">Sách</a></li>
+                <li><a href="{{ url('/location') }}">Tin tức</a></li>
+                <li><a href="{{ url('/contact') }}">Liên hệ</a></li>
             </ul>
         </nav>
         <div class="header-actions">
