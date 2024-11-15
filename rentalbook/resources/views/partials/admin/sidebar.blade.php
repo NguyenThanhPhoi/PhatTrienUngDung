@@ -25,9 +25,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <form action="{{ route('admin.logout') }}" method="post">
+                    @csrf
+                    <button type="submit">Đăng xuất</button>
+                </form>
+                {{-- <a class="nav-link" href="">
                     Đăng xuất
-                </a>
+                </a> --}}
             </li>
         </ul>
     </div>
