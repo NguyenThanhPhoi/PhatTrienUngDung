@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'tai_khoan',
     ],
 
     /*
@@ -28,7 +28,7 @@ return [
     | here which uses session storage and the Eloquent user provider.
     |
     | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
+    | tai_khoan are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
     | Supported: "session"
@@ -38,7 +38,11 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'tai_khoan',
+        ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'tai_khoan',
         ],
     ],
 
@@ -48,7 +52,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
-    | users are actually retrieved out of your database or other storage
+    | tai_khoan are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
     | If you have multiple user tables or models you may configure multiple
@@ -60,14 +64,14 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'tai_khoan' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\taikhoan::class,
         ],
 
-        // 'users' => [
+        // 'tai_khoan' => [
         //     'driver' => 'database',
-        //     'table' => 'users',
+        //     'table' => 'tai_khoan',
         // ],
     ],
 
@@ -91,8 +95,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'tai_khoan' => [
+            'provider' => 'tai_khoan',
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
